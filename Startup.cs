@@ -5,7 +5,7 @@ using AuthServiceProject.UserService;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -34,7 +34,10 @@ namespace AuthServiceProject
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddCors();
-            services.AddDbContext<UserContext>(opts => opts.UseSqlServer(Configuration["ConnectionStrings:conCM"]));
+            var builder = new SqlConnectionStringBuilder(Configuration.GetConnectionString("conCM"));
+            builder.UserID = "hp";
+            builder.Password = "root1234";
+            services.AddDbContext<UserContext>(opts => opts.UseSqlServer(builder.ConnectionString));
             services.AddScoped<ITokenService, TokenService.TokenService>();
             services.AddScoped<IUserService, UserService.UserService>();
             services.AddScoped<IUserRepository<User, UserLoan>, UserRepository.UserRepository>();

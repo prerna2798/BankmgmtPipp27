@@ -72,3 +72,4 @@ C:\Users\hp\source\Angular\AuthServiceProject\bin\Debug\netcoreapp3.1\Microsoft.
 C:\Users\hp\source\Angular\AuthServiceProject\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll
 C:\Users\hp\source\Angular\AuthServiceProject\bin\Debug\netcoreapp3.1\log4net.config
 C:\Users\hp\source\Angular\AuthServiceProject\obj\Debug\netcoreapp3.1\AuthServiceProject.csprojAssemblyReference.cache
+C:\Users\hp\source\Angular\AuthServiceProject\bin\Debug\netcoreapp3.1\aws-beanstalk-tools-defaults.json

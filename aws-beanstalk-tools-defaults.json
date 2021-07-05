@@ -1,0 +1,20 @@
+
+{
+    "region" : "ap-south-1",
+    "configuration" : "Debug",
+    "framework"     : "netcoreapp3.1",
+    "self-contained" : false,
+    "application"    : "AuthServiceProject",
+    "environment"    : "AuthServiceProject-dev",
+    "enable-xray"    : false,
+    "enhanced-health-type" : "basic",
+    "additional-options"   : "\"aws:autoscaling:launchconfiguration,SecurityGroups\"=\"sg-573eb72b,sg-06d1be467b48f6d7b\";\"aws:ec2:vpc,Subnets\"=\"subnet-caf0d486\"",
+    "solution-stack"       : "64bit Amazon Linux 2 v2.2.1 running .NET Core",
+    "environment-type"     : "SingleInstance",
+    "cname"                : "authserviceproject-dev",
+    "instance-type"        : "t3a.medium",
+    "key-pair"             : "",
+    "instance-profile"     : "aws-elasticbeanstalk-ec2-role",
+    "service-role"         : "aws-elasticbeanstalk-service-role",
+    "proxy-server"         : "nginx"
+}
